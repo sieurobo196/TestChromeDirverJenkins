@@ -16,21 +16,14 @@ public class App {
 
     public static void main(String[] args) {
         try {
-//            String exePath = "/usr/local/chromedriver";
-//            System.setProperty("webdriver.chrome.driver", exePath);
-             System.setProperty("webdriver.chrome.driver",
-                    String.format("/usr/local/bin/chromedriver", "root"));
-            // Create a new instance of the Firefox driver
+            String chromeDriverPath = "/usr/bin/chromedriver";
+            System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+            WebDriver driver = new ChromeDriver();
 //            ChromeOptions chromeOptions = new ChromeOptions();
-//            chromeOptions.addArguments("window-size=1100,900");
-
-//            DesiredCapabilities cap = DesiredCapabilities.chrome();
-//            cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--headless");
-            chromeOptions.addArguments("--no-sandbox");
-
-            WebDriver driver = new ChromeDriver(chromeOptions);
+//            chromeOptions.addArguments("--headless");
+//            chromeOptions.addArguments("--no-sandbox");
+//
+//            WebDriver driver = new ChromeDriver(chromeOptions);
 //            WebDriver driver = new ChromeDriver(chromeOptions);
 //            WebDriver driver = new ChromeDriver(cap);
             //Launch the google.com Website
